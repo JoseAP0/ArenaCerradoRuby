@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bem-vindo à Arena Cerrado</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+  <body>
+  <div class="navbar">
+      <%= image_tag "monkeylogo.png", :alt => "brand logo", :class => "navbar-brand" %>
+      <div class="nav-links>
+          <%= link_to 'About', login_index_path %> </div>
+      <div class="nav-links>
+          <%= link_to 'Contact us', login_index_path %> </div>
+      <div class="nav-links>
+          <%= link_to 'Events', login_index_path %> </div>
+  </div>
+      <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+@import "bootstrap";
+
+.navbar{
+    justify-content: flex-start;
+}
+
+.navbar-brand{
+    width: 75px;
+    margin: 10px;
+}
+
+.nav-links{
+    margin: 20px;
+}
+
+
+.btn btn-primary{
+    margin: 0;
+}
+
+/*
+* require_self .
+* require_tree
+ */
