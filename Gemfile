@@ -15,6 +15,9 @@ gem 'phonemask-rails-brasil', '0.2.0'
 # The gem for Rails to work with SASS files.
 gem 'sass-rails'
 
+#Rubocop adding
+gem 'rubocop'
+
 # live server gems config
 gem 'guard-livereload'
 
