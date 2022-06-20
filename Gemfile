@@ -9,6 +9,12 @@ gem "rails", "~> 7.0.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Gem to use mask with phone numbers
+gem 'phonemask-rails-brasil', '0.2.0'
+
+# The gem for Rails to work with SASS files.
+gem 'sass-rails'
+
 # live server gems config
 gem 'guard-livereload'
 

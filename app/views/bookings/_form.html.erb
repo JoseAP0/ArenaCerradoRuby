@@ -1,0 +1,21 @@
+<%= form_with(model: Booking) do |form| %>
+  <div class="major-form">
+  <%= form.label :name %>
+  <%= form.text_field :full_name %>
+  <%= form.label :phone %>
+  <%= form.text_field :phone, input_html:{ data: {"phone-mask": true} }%>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  <%= form.label :cpf %>
+  <%= form.text_field :cpf %>
+  <%= form.label :commentary %>
+  <%= form.text_field :annotation %>
+  <%= form.label :booking_date %>
+  <%= form.date_field :booking_date %>
+  <%= form.label :booking_time_start %>
+  <%= form.datetime_local_field :booking_time_start %>
+  <%= form.label :booking_time_ending %>
+  <%= form.datetime_local_field :booking_time_ending %>
+  <%= form.submit 'Send'%>
+  </div>
+  <%  end %>
