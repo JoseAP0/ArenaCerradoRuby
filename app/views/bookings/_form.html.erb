@@ -1,21 +1,73 @@
-<%= form_with(model: Booking) do |form| %>
-  <div class="major-form">
-  <%= form.label :name %>
-  <%= form.text_field :full_name %>
-  <%= form.label :phone %>
-  <%= form.text_field :phone, input_html:{ data: {"phone-mask": true} }%>
-  <%= form.label :email %>
-  <%= form.text_field :email %>
-  <%= form.label :cpf %>
-  <%= form.text_field :cpf %>
-  <%= form.label :commentary %>
-  <%= form.text_field :annotation %>
-  <%= form.label :booking_date %>
-  <%= form.date_field :booking_date %>
-  <%= form.label :booking_time_start %>
-  <%= form.datetime_local_field :booking_time_start %>
-  <%= form.label :booking_time_ending %>
-  <%= form.datetime_local_field :booking_time_ending %>
-  <%= form.submit 'Send'%>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+
+
+    <% #Bootstrap CSS %>
+    <%= stylesheet_link_tag "bootstrap", "bootstrap.min.css" %>
+
+    <% # Style %>
+    <%= stylesheet_link_tag "application", "style" %>
+
+    <title>Booking game</title>
+  </head>
+
+  <body>
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+
+              <h2 class="mb-5">Book your<br> game below. </h2>
+
+              <%= form_with method: "post", model: booking, class: "border-right pr-5 mb-5" do |form| %>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <%= form.text_field :full_name , class: "form-control", placeholder: "First name"%>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <%= form.text_field :phone , class: "form-control", placeholder: "Contact Phone"%>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <%= form.text_field :email , class: "form-control", placeholder: "E-mail"%>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <%= form.text_field :cpf , class: "form-control", placeholder: "CPF"%>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <%= form.datetime_local_field :booking_time_start , class: "form-control", placeholder: "Booking time start"%>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <%= form.datetime_local_field :booking_time_ending , class: "form-control", placeholder: "Booking time ending"%>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <%= form.text_area :commentary, class: "form-control", cols: "30", rows: "7", placeholder: "Write your message" %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <%= form.submit "Send message", class: "btn btn-primary rounded-0 py-2 px-4"%>
+                  </div>
+                </div>
+              <% end %>
+
+            </div>
+            <div class="col-lg-4 ml-auto">
+              <h3 class="mb-4">Let's talk about everything.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil deleniti itaque similique magni. Magni, laboriosam perferendis maxime!</p>
+              <p><a href="#">Read more</a></p>
+            </div>
+          </div>
+        </div>  
+        </div>
+      </div>
   </div>
-  <%  end %>
