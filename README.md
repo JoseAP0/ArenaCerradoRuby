@@ -1,6 +1,6 @@
 # ArenaCerrado Project
 
-[arenacerrado.herokuapp.com](arenacerrado.herokuapp.com)
+[arenacerrado.herokuapp.com](https://arenacerrado.herokuapp.com/)
 
 ## Install
 
