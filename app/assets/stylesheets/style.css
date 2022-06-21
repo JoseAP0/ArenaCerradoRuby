@@ -54,6 +54,9 @@ label.error {
 #message {
   resize: vertical; }
 
+#textarea {
+  resize: none;
+}
 #form-message-warning, #form-message-success {
   display: none; }
 

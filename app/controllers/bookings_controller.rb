@@ -10,9 +10,10 @@ class BookingsController < ActionController::Base
 
     respond_to do |format|
       if @booking.save
-        format.html { redirect_to new_booking_path, notice: "Your booking was completed." }
+        format.html { redirect_to new_booking_path, flash: {success: "all caught up. Thank you!"}}
         # format.json { render :show, status: :created, location: @booking }
       else
+        format.html { redirect_to new_booking_path, flash: { error: "Something went wrong with your booking. Please Try again"}}
         format.html { render :new, status: :unprocessable_entity }
         # format.json { render json: @booking.errors, status: :unprocessable_entity }
       end

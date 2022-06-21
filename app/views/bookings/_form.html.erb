@@ -13,7 +13,18 @@
     <% # Style %>
     <%= stylesheet_link_tag "application", "style" %>
 
-    <title>Booking game</title>
+    <% if booking.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(test.errors.count, "error") %> Something went wrong with your booking. Please Try again</h2>
+
+        <ul>
+          <% booking.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <title>Booking a game</title>
   </head>
 
   <body>
@@ -32,25 +43,27 @@
                     <%= form.text_field :full_name , class: "form-control", placeholder: "First name"%>
                   </div>
                   <div class="col-md-6 form-group">
-                    <%= form.text_field :phone , class: "form-control", placeholder: "Contact Phone"%>
+                    <%= form.text_field :phone , class: "form-control", id: "phone", maxlength: 11, placeholder: "Contact Phone"%>
                   </div>
                   <div class="col-md-6 form-group">
                     <%= form.text_field :email , class: "form-control", placeholder: "E-mail"%>
                   </div>
                   <div class="col-md-6 form-group">
-                    <%= form.text_field :cpf , class: "form-control", placeholder: "CPF"%>
+                    <%= form.text_field :cpf , class: "form-control", maxlength: 11, placeholder: "CPF"%>
                   </div>
                   <div class="col-md-6 form-group">
-                    <%= form.datetime_local_field :booking_time_start , class: "form-control", placeholder: "Booking time start"%>
+                    <p> Booking start </p>
+                    <%= form.datetime_local_field :booking_time_start , id: "dateTimePicker", placeholder: "Booking time start"%>
                   </div>
                   <div class="col-md-6 form-group">
-                    <%= form.datetime_local_field :booking_time_ending , class: "form-control", placeholder: "Booking time ending"%>
+                    <p> Booking ending </p>
+                    <%= form.datetime_local_field :booking_time_ending , id: "dateTimePicker", placeholder: "Booking time ending"%>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <%= form.text_area :commentary, class: "form-control", cols: "30", rows: "7", placeholder: "Write your message" %>
+                    <%= form.text_area :annotation, class: "form-control", id: "textarea", cols: "30", rows: "7", placeholder: "Write your message" %>
                   </div>
                 </div>
                 <div class="row">

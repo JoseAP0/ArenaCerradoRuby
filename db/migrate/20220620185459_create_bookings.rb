@@ -6,7 +6,6 @@ class CreateBookings < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :cpf
       t.string :annotation
-      t.date :booking_date
       t.timestamp :booking_time_start
       t.timestamp :booking_time_ending
 
