@@ -13,17 +13,6 @@
     <% # Style %>
     <%= stylesheet_link_tag "application", "style" %>
 
-    <% if booking.errors.any? %>
-      <div style="color: red">
-        <h2><%= pluralize(test.errors.count, "error") %> Something went wrong with your booking. Please Try again</h2>
-
-        <ul>
-          <% booking.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
     <title>Booking a game</title>
   </head>
 
@@ -36,8 +25,8 @@
             <div class="col-lg-7 mb-5 mb-lg-0">
 
               <h2 class="mb-5">Book your<br> game below. </h2>
-
-              <%= form_with method: "post", model: booking, class: "border-right pr-5 mb-5" do |form| %>
+                <%= render 'flash' %>
+                <%= form_with method: "post", model: booking, class: "border-right pr-5 mb-5" do |form| %>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <%= form.text_field :full_name , class: "form-control", placeholder: "First name"%>
