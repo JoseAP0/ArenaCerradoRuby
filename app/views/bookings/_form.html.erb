@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
 
-
     <% #Bootstrap CSS %>
     <%= stylesheet_link_tag "bootstrap", "bootstrap.min.css" %>
+
 
     <% # Style %>
     <%= stylesheet_link_tag "application", "style" %>
@@ -17,13 +16,12 @@
   </head>
 
   <body>
-  <div class="content">
+    <div class="content">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10">
           <div class="row align-items-center">
             <div class="col-lg-7 mb-5 mb-lg-0">
-
               <h2 class="mb-5">Book your<br> game below. </h2>
                 <%= render 'flash' %>
                 <%= form_with method: "post", model: booking, class: "border-right pr-5 mb-5" do |form| %>
@@ -61,7 +59,6 @@
                   </div>
                 </div>
               <% end %>
-
             </div>
             <div class="col-lg-4 ml-auto">
               <h3 class="mb-4">Let's talk about everything.</h3>

@@ -1,18 +1,18 @@
-class BookingsController < ActionController::Base
+class BookingsController < ApplicationController
+
+  before_action :authenticate_user!
 
   def new
     @booking = Booking.new
   end
 
   def create
-
     @booking = Booking.new(bookings_params)
 
+    redirect_to new_booking_path
     if @booking.save
-      redirect_to new_booking_path
       flash[:success] = 'Booking saved successfully'
     else
-      redirect_to new_booking_path
       flash[:danger] = 'Something went wrong. Please try again'
     end
   end
