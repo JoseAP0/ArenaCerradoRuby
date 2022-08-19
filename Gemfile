@@ -21,8 +21,9 @@ gem 'rubocop'
 # adding Devise
 gem 'devise'
 
-# live server gems config
-gem 'guard-livereload'
+gem 'bootstrap', '~> 4.4.1'
+
+gem 'jquery-rails'
 
 gem 'rack-livereload'
 
