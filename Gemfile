@@ -15,15 +15,13 @@ gem 'phonemask-rails-brasil', '0.2.0'
 # The gem for Rails to work with SASS files.
 gem 'sass-rails'
 
+gem 'uglifier'
+
 # adding Rubocop
 gem 'rubocop'
 
 # adding Devise
 gem 'devise'
-
-gem 'bootstrap', '~> 4.4.1'
-
-gem 'jquery-rails'
 
 gem 'rack-livereload'
 
@@ -88,3 +86,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'oauth2'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection", "~> 1.0"
