@@ -1,11 +1,9 @@
 //=link_tree
 //= link_directory ../stylesheets .css
-//= link_tree ../../javascript .js
-//= link_tree ../../../vendor/javascript .js
+//= link_directory ../javascripts .js
 //= link_tree ../img .jpg
 //= link_tree ../img .png
-//= link vendor/modernizr-2.8.3-respond-1.4.2.min.js
-//= link vendor/bootstrap.min.js
-//= link plugins.js
-//= link main.js
-//= link script.js
+
+//= link bootstrap.css
+//= link bootstrap.js
+//= link jquery.js

@@ -1,6 +1,48 @@
-<h1>Layout da home</h1>
+<!DOCTYPE html>
+<html>
 
-  <body>
+<head>
+  <title>ArenaCerrado</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_importmap_tags %>
+
+  <%= stylesheet_link_tag 'bootstrap' %>
+  <%= javascript_include_tag 'bootstrap' %>
+  <%= stylesheet_link_tag 'home_style' %>
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+  <%= javascript_include_tag 'script' %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+<!--  <p class="notice"><%#= notice %></p>-->
+<!--  <p class="alert"><%#= alert %></p>-->
+<header>
+  <nav>
+    <div class="menu-icon">
+      <i class="fa fa-bars fa-2x"></i>
+    </div>
+    <div class="menu">
+      <ul>
+        <li> <%= link_to 'Home', root_path %> </li>
+        <li> <%= link_to 'Booking', new_booking_path %> </li>
+        <li><a href="#">Blog</a></li>
+        <li class="logo">
+          <%= link_to root_path do %>
+            <%= image_tag 'Prancheta 1.png', id: 'team-logo'%>
+          <% end %>
+        </li>
+        <li><%= link_to "Edit account", edit_user_registration_path %></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
   <%= yield %>
+</body>
 
-  </body>
+</html>
