@@ -9,11 +9,16 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(bookings_params)
 
-    redirect_to new_booking_path
     if @booking.save
       flash[:success] = 'Booking saved successfully'
+      respond_to do |format|
+        format.html { redirect_to root_path }
+      end
     else
       flash[:danger] = 'Something went wrong. Please try again'
+      respond_to do |format|
+        format.html { redirect_to new_booking_path }
+      end
     end
   end
 

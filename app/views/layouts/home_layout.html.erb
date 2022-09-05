@@ -18,16 +18,25 @@
 </head>
 
 <body>
-<!--  <p class="notice"><%#= notice %></p>-->
-<!--  <p class="alert"><%#= alert %></p>-->
 <header>
+<div class="over-nav">
+
+  <%= link_to 'Português', '?locale=pt' %>
+  <%= link_to 'English', '?locale=en' %>
+
+  <% if user_signed_in? %>
+    <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "upnav-button" %>
+  <% else %>
+    <%= link_to 'Log in here', new_user_session_path, class: "upnav-item" %>
+  <% end %>
+</div>
   <nav>
     <div class="menu-icon">
       <i class="fa fa-bars fa-2x"></i>
     </div>
     <div class="menu">
       <ul>
-        <li> <%= link_to 'Home', root_path %> </li>
+        <li> <%= link_to t("hello"), root_path %> </li>
         <li> <%= link_to 'Booking', new_booking_path %> </li>
         <li><a href="#">Blog</a></li>
         <li class="logo">

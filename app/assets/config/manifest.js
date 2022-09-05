@@ -7,3 +7,7 @@
 //= link bootstrap.css
 //= link bootstrap.js
 //= link jquery.js
+//= link owl.carousel.min.js
+//= link popper.js
+//= link owl.carousel.min.css
+//= link owl.theme.default.min.css

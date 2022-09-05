@@ -1,5 +1,7 @@
 class Booking < ApplicationRecord
 
+  # belongs_to :user
+
   validates :cpf, :phone, presence: true, numericality: { only_integer: true }
   validates :booking_time_start, :booking_time_ending, uniqueness: true, presence: true
   validates :cpf, :phone, length: {maximum: 11}

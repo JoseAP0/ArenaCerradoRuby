@@ -13,7 +13,7 @@ header {
     z-index: 9999;
     width: 100%;
     height: 100vh;
-    background: url(ney-paper.jpg) no-repeat 50% 50%;
+    background: url(tim-roosjen-jLUSUUUbZeE-unsplash.jpg) no-repeat 50% 50%;
     background-size: cover;
 }
 
@@ -26,6 +26,7 @@ header {
 }
 
 .logo {
+    padding: 0 40px;
 }
 
 #team-logo {
@@ -69,6 +70,7 @@ nav ul li a {
 .menu {
     display: flex;
     justify-content: center;
+    background: rgba(104,104,104,0.45);
 }
 
 .menu-icon {
@@ -81,6 +83,19 @@ nav ul li a {
     cursor: pointer;
     color: #fff;
     display: none;
+}
+
+.navbutton {
+}
+
+.upnav-item {
+    display: flex;
+    align-items: flex-end;
+    float: right;
+}
+.over-nav {
+    background-color: #0f0f0f;
+    opacity: 0.6;
 }
 
 @media(max-width: 786px) {
@@ -114,5 +129,4 @@ nav ul li a {
     .menu-icon {
         display: block;
     }
-
 }
