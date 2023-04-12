@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   before_action :authenticate_user!
 
   def new
@@ -23,6 +22,4 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:full_name, :phone, :email, :cpf, :annotation, :booking_date,
                                     :booking_time_start, :booking_time_ending)
   end
-
 end
-
